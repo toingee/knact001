@@ -1,11 +1,13 @@
 source 'http://rubygems.org'
 
+gem 'rake', '10.3.1'
+gem 'pg'
 gem 'rails', '4.0.3'
 gem 'jquery-rails', '3.0.4'
 gem 'rails_autolink'
-gem 'mysql2'
+#gem 'mysql2'
 gem 'devise'
-gem 'twitter_oauth', git: 'git://github.com/moomerman/twitter_oauth.git'
+gem 'twitter_oauth', :git => "git://github.com/moomerman/twitter_oauth.git"
 gem 'therubyracer'
 gem 'exception_notification'
 gem 'nested_form'
@@ -29,7 +31,7 @@ gem 'capistrano', '~> 2.15.4'
 gem 'rack-utf8_sanitizer'
 gem 'newrelic_rpm'
 gem 'actionpack-xml_parser'
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', :git => "git://github.com/gregbell/active_admin"
 gem 'chronic'
 
 # to use debugger
@@ -48,7 +50,7 @@ group :development do
 end
 
 group :test do
-  gem 'sqlite3-ruby', '1.3.3', :require => 'sqlite3'
+  #gem 'sqlite3-ruby', '1.3.3', :require => 'sqlite3'
   gem 'rspec-rails', '~> 2.14.1'
   gem 'spork'
   gem 'factory_girl_rails'
@@ -60,4 +62,10 @@ group :test do
   gem 'ZenTest'
   gem 'database_cleaner', '~> 1.2.0'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
+
+ruby '2.1.1'
 

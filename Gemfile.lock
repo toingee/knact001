@@ -1,18 +1,18 @@
 GIT
-  remote: git://github.com/gregbell/active_admin.git
-  revision: 3fb7f03335b1ec5743c305f2c37103e2bfface97
+  remote: git://github.com/gregbell/active_admin
+  revision: a40f3351a8b93f2228c875c98b275a01a40e72a6
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
       bourbon
       coffee-rails
       devise (~> 3.2)
-      formtastic (~> 2.3.0.rc2)
+      formtastic (~> 2.3.0.rc3)
       inherited_resources (~> 1.3)
       jquery-rails
       jquery-ui-rails
       kaminari (~> 0.15)
-      rails (>= 3.2, < 4.1)
+      rails (>= 3.2, <= 4.1)
       ransack (~> 1.0)
       sass-rails
 
@@ -80,8 +80,8 @@ GEM
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
-    bourbon (3.1.8)
-      sass (>= 3.2.0)
+    bourbon (3.2.1)
+      sass (~> 3.2)
       thor
     builder (3.1.4)
     capistrano (2.15.4)
@@ -141,7 +141,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.8.9)
       multipart-post (~> 1.2.0)
-    formtastic (2.3.0.rc2)
+    formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
     geokit (1.8.4)
       multi_json (>= 1.3.2)
@@ -167,7 +167,7 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (4.2.0)
+    jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
     json (1.8.1)
     json_spec (1.1.1)
@@ -187,7 +187,6 @@ GEM
     mono_logger (1.1.0)
     multi_json (1.8.4)
     multipart-post (1.2.0)
-    mysql2 (0.3.14)
     nested_form (0.3.2)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -201,7 +200,8 @@ GEM
       mini_portile (~> 0.5.0)
     oauth (0.4.7)
     orm_adapter (0.5.0)
-    polyamorous (0.6.4)
+    pg (0.17.1)
+    polyamorous (1.0.0)
       activerecord (>= 3.0)
     polyglot (0.3.4)
     puma (2.8.1)
@@ -223,18 +223,25 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.3)
       sprockets-rails (~> 2.0.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_autolink (1.1.5)
       rails (> 3.1)
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.0.3)
       actionpack (= 4.0.3)
       activesupport (= 4.0.3)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.1.1)
-    ransack (1.1.0)
+    rake (10.3.1)
+    ransack (1.2.2)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
-      polyamorous (~> 0.6.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.0.0)
     redis (3.0.7)
     redis-namespace (1.4.1)
       redis (~> 3.0.4)
@@ -291,9 +298,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sqlite3 (1.3.8)
-    sqlite3-ruby (1.3.3)
-      sqlite3 (>= 1.3.3)
     term-ansicolor (1.2.2)
       tins (~> 0.8)
     terminal-table (1.4.5)
@@ -362,15 +366,17 @@ DEPENDENCIES
   jquery-rails (= 3.0.4)
   json_spec
   kgio
-  mysql2
   nested_form
   newrelic_rpm
   nokogiri
+  pg
   puma
   quiet_assets
   rack-utf8_sanitizer
   rails (= 4.0.3)
+  rails_12factor
   rails_autolink
+  rake (= 10.3.1)
   redis
   resque-scheduler (= 2.3.1)
   resque-timeout
@@ -378,7 +384,6 @@ DEPENDENCIES
   sass-rails (~> 4.0)
   simplificator-rwebthumb!
   spork
-  sqlite3-ruby (= 1.3.3)
   therubyracer
   tweetstream
   twitter_oauth!
