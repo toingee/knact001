@@ -6,6 +6,7 @@ gem 'rails', '4.0.3'
 gem 'jquery-rails', '3.0.4'
 gem 'rails_autolink'
 gem 'authlogic'
+gem 'scrypt'
 #gem 'mysql2'
 gem 'devise'
 gem 'twitter_oauth', :git => "git://github.com/moomerman/twitter_oauth.git"
