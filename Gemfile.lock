@@ -73,6 +73,10 @@ GEM
       activesupport (>= 3.0.0)
     arel (4.0.2)
     atomic (1.1.14)
+    authlogic (3.4.1)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
+      request_store (~> 1.0.5)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
     autotest-rails (4.2.1)
@@ -246,6 +250,7 @@ GEM
     redis-namespace (1.4.1)
       redis (~> 3.0.4)
     ref (1.0.5)
+    request_store (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     resque (1.25.1)
@@ -347,6 +352,7 @@ DEPENDENCIES
   acts_as_list
   acts_as_tree
   annotate (~> 2.6.1)
+  authlogic
   autotest
   autotest-rails
   capistrano (~> 2.15.4)
