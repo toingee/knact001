@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20140410174033) do
     t.string   "api_key",    limit: 16
     t.integer  "channel_id"
     t.integer  "user_id"
-    t.boolean  "write_flag",            default: false
+    t.boolean  "write_flag",            default: nil
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "note"
