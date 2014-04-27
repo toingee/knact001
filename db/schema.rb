@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140410174033) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
     t.text     "body"
@@ -50,7 +53,7 @@ ActiveRecord::Schema.define(version: 20140410174033) do
     t.string   "api_key",    limit: 16
     t.integer  "channel_id"
     t.integer  "user_id"
-    t.boolean  "write_flag",            default: nil
+    t.boolean  "write_flag",            default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "note"
@@ -149,7 +152,7 @@ ActiveRecord::Schema.define(version: 20140410174033) do
     t.date    "date"
     t.string  "calculation", limit: 20
     t.string  "result"
-    t.integer "field",       limit: 1
+    t.integer "field",       limit: 2
   end
 
   add_index "daily_feeds", ["channel_id", "date"], name: "index_daily_feeds_on_channel_id_and_date", using: :btree
